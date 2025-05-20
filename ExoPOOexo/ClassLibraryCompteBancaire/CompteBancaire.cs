@@ -23,18 +23,28 @@
             return solde;
         }
 
-        public decimal Debiter(decimal montant)
+        public bool Debiter(decimal montant)
         {
-            solde = solde - montant;
-            return solde;
-        
-        
+            decimal reste = solde - montant;
+
+            if (reste >= decouvertAutorise)
+            {
+                solde = reste;
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
+
         }
 
         public override string ToString()
         {
             return $"Le numero de Compte {this.numero}, avec pour nom {this.nom}, ayant pour solde {this.solde}. Vous avez un découvert autorisé de {this.decouvertAutorise}.";
         }
+
+
 
 
 
