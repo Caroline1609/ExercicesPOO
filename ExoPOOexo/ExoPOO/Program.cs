@@ -30,22 +30,20 @@ namespace ExoPOO
             Console.WriteLine(compte1.ToString());
             Console.WriteLine(compte2.ToString());
 
+
             Console.WriteLine("\tComparer Compte 1 et Compte 2\n");
+
             compte1.Comparer(compte2);
 
             if (compte1.Comparer(compte2))
             {
-                Console.WriteLine("Superieur");
+                Console.WriteLine("Le compte 1 a un solde Superieur au compte 2");
             }
             else {
-                Console.WriteLine("Inférieur");
+                Console.WriteLine("Le compte 1 a un solde Inféfieur au compte 2");
             }
 
-
-            
-
-
-
+                    
 
             Console.ReadLine();
 

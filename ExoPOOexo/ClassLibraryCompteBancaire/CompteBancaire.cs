@@ -9,7 +9,23 @@ namespace ClassLibraryCompteBancaire
         private decimal solde;
         private int decouvertAutorise;
 
+        public int Numero { get => numero; }
+        public string Nom { get => nom; }
+        public decimal Solde { get => solde; }
+        public int DecouvertAutorise { get => decouvertAutorise;}
 
+        //Constructeur par défaut 
+        public CompteBancaire() : this(25485245, "Maria", 250.00m, -1000)
+
+        {
+
+        }
+        //Constructeur Par Clonage
+        public CompteBancaire(CompteBancaire CompteBancaireACloner) : this(CompteBancaireACloner.numero, CompteBancaireACloner.nom, CompteBancaireACloner.solde, CompteBancaireACloner.decouvertAutorise)
+
+        {
+
+        }
 
         public CompteBancaire (int numero, string nom, decimal solde, int decouvertAutorise)
         {
@@ -36,7 +52,6 @@ namespace ClassLibraryCompteBancaire
             }
             else
             {
-                Console.WriteLine("\tErreur : Le solde dépasserait le découvert autorisé.\n");
                 return false; 
             }
 
