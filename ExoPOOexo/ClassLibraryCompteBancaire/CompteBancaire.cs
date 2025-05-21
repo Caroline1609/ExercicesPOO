@@ -23,7 +23,7 @@ namespace ClassLibraryCompteBancaire
 
 
         //Constructeur Par Clonage
-        public CompteBancaire(CompteBancaire CompteBancaireACloner) : this(CompteBancaireACloner.numero, CompteBancaireACloner.nom, CompteBancaireACloner.solde, CompteBancaireACloner.decouvertAutorise)
+        public CompteBancaire(CompteBancaire compteBancaireACloner) : this(compteBancaireACloner.numero, compteBancaireACloner.nom, compteBancaireACloner.solde, compteBancaireACloner.decouvertAutorise)
 
         {
 

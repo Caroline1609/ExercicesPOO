@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompteBancaire", "ExoPOO\CompteBancaire.csproj", "{8656FB6A-3B3D-4F71-951B-119E0631DB4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompteBancaire", "ExoPOO\CompteBancaire.csproj", "{8656FB6A-3B3D-4F71-951B-119E0631DB4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCompteBancaire", "ClassLibraryCompteBancaire\ClassLibraryCompteBancaire.csproj", "{C667F02A-8237-4071-BDF3-D5B5E01D5C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryCompteBancaire", "ClassLibraryCompteBancaire\ClassLibraryCompteBancaire.csproj", "{C667F02A-8237-4071-BDF3-D5B5E01D5C63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPoint", "ClassLibraryPoint\ClassLibraryPoint.csproj", "{38594B76-B443-4532-A66C-856B7B2218B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{C667F02A-8237-4071-BDF3-D5B5E01D5C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C667F02A-8237-4071-BDF3-D5B5E01D5C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C667F02A-8237-4071-BDF3-D5B5E01D5C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38594B76-B443-4532-A66C-856B7B2218B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38594B76-B443-4532-A66C-856B7B2218B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38594B76-B443-4532-A66C-856B7B2218B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38594B76-B443-4532-A66C-856B7B2218B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
