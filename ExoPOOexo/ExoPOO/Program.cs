@@ -1,4 +1,5 @@
 ﻿using ClassLibraryCompteBancaire;
+using System;
 
 namespace ExoPOO
 {
@@ -6,17 +7,47 @@ namespace ExoPOO
     {
         static void Main(string[] args)
         {
+
+            CompteBancaire compte1 = new CompteBancaire(25485245, "Bruno Le méchant", 1000.00m, -500);
+            CompteBancaire compte2 = new CompteBancaire(25485245, "Caroline", 600.00m, -1000);
+
+
+            Console.WriteLine("\tEtat des comptes\n");
+            Console.WriteLine(compte2.ToString());
+            Console.WriteLine(compte1.ToString());
+
+            Console.WriteLine("\tEtat du compte après Créditage\n");
+            compte1.Crediter(100.00m);
+
+            Console.WriteLine(compte1.ToString());
+
+            Console.WriteLine("Etat du compte après Débitage\n");
+            compte1.Debiter(50.00m);
+            Console.WriteLine(compte1.ToString());
+
+            Console.WriteLine("\tEtat du compte après Transfère de Compte 1 vers Compte 2\n");
+            Console.WriteLine(compte1.Transferer(compte2, 1000.00m));
+            Console.WriteLine(compte1.ToString());
+            Console.WriteLine(compte2.ToString());
+
+            Console.WriteLine("\tComparer Compte 1 et Compte 2\n");
+            compte1.Comparer(compte2);
+
+            if (compte1.Comparer(compte2))
+            {
+                Console.WriteLine("Superieur");
+            }
+            else {
+                Console.WriteLine("Inférieur");
+            }
+
+
             
 
 
-            CompteBancaire Compte1 = new CompteBancaire(25485245, "Bruno Le méchant", 521.25m, 500);
-
-            Console.WriteLine(Compte1.ToString());
-
-            Console.WriteLine("Crédité "+ Compte1.Crediter(50.00m));
-            Console.WriteLine("debiter " + Compte1.Debiter(20.00m));
 
 
+            Console.ReadLine();
 
         }
     }
