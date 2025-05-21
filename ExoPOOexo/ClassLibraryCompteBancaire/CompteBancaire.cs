@@ -32,7 +32,6 @@ namespace ClassLibraryCompteBancaire
 
             if (solde >= decouvertAutorise)
             {
-                solde = solde;
                 return true;
             }
             else
