@@ -18,7 +18,6 @@ namespace Point
             Console.WriteLine(p1.ToString());
 
 
-
             p1.SymetrieOrigine();
             Console.WriteLine("Origine :");
             Console.WriteLine(p1.ToString());

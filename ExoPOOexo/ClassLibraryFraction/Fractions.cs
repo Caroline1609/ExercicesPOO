@@ -16,17 +16,42 @@
 
         }
 
-        public string ToString()
+        public Fractions Divise(Fractions autreFraction)
+        {
+            return new Fractions(this.numerateur * autreFraction.denominateur, this.denominateur * autreFraction.numerateur);
+        }
+
+
+        public bool EgalA(Fractions autreFraction)
+        {
+            bool result;
+
+
+            if (this.numerateur * autreFraction.denominateur == autreFraction.numerateur * this.denominateur)
+            {
+
+                result = true;
+
+            }
+            else
+            {
+
+                result = false;
+            }
+
+            return result;
+        }
+
+    }
+
+    public string ToString()
         {
             return $"{numerateur}/{denominateur}";
         }
 
         
 
-        public Fractions Divise(Fractions autreFraction)
-        {
-            return new Fractions(this.numerateur * autreFraction.denominateur, this.denominateur * autreFraction.numerateur);
-        }
+        
 
 
 

@@ -1,5 +1,6 @@
 ﻿using ClassLibraryCompteBancaire;
 using System;
+using static ClassLibraryCompteBancaire.CompteBancaire;
 
 namespace ExoPOO
 {
@@ -33,17 +34,23 @@ namespace ExoPOO
 
             Console.WriteLine("\tComparer Compte 1 et Compte 2\n");
 
-            compte1.Comparer(compte2);
+            ParSolde comparer = new ParSolde();
+            decimal result = comparer.Compare(compte1, compte2);
 
-            if (compte1.Comparer(compte2))
+            Console.WriteLine("\nRésultat de la comparaison :");
+            if (result > 0)
             {
-                Console.WriteLine("Le compte 1 a un solde Superieur au compte 2");
+                Console.WriteLine("Compte 1 a un solde plus élevé que Compte 2.");
             }
-            else {
-                Console.WriteLine("Le compte 1 a un solde Inféfieur au compte 2");
+            else if (result < 0)
+            {
+                Console.WriteLine("Compte 1 a un solde plus bas que Compte 2.");
+            }
+            else
+            {
+                Console.WriteLine("Compte 1 et Compte 2 ont le même solde.");
             }
 
-                    
 
             Console.ReadLine();
 

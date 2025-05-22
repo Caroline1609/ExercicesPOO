@@ -1,4 +1,6 @@
-﻿using System.Security.Principal;
+﻿using System.Collections;
+using System.Reflection.Metadata;
+using System.Security.Principal;
 
 namespace ClassLibraryCompteBancaire
 {
@@ -40,6 +42,12 @@ namespace ClassLibraryCompteBancaire
 
         public decimal Crediter(decimal montant)
         {
+
+            if (montant <= 0)
+            {
+                throw new ArgumentException("Le montant à créditer doit être positif.");
+            }
+
             solde = solde + montant;
             return solde;
         }
@@ -82,20 +90,17 @@ namespace ClassLibraryCompteBancaire
             
         }
 
-        public bool Comparer(CompteBancaire compteAComparer)
+        public class ParSolde : IComparer<CompteBancaire>
         {
-
-            if (this.solde > compteAComparer.solde)
+            public int Compare(CompteBancaire compte1, CompteBancaire compte2)
             {
-                return true;
+                return compte1.Solde.CompareTo(compte2.Solde);
             }
-            else
-            {
-                return false;
-            }
-
         }
+
     }
 
-}
+
+
+    }
 
