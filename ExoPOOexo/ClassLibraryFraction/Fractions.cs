@@ -16,6 +16,11 @@
 
         }
 
+        public string ToString()
+        {
+            return $"{this.numerateur}/{denominateur}";
+        }
+
         public Fractions Divise(Fractions autreFraction)
         {
             return new Fractions(this.numerateur * autreFraction.denominateur, this.denominateur * autreFraction.numerateur);
@@ -44,10 +49,7 @@
 
     }
 
-    public string ToString()
-        {
-            return $"{numerateur}/{denominateur}";
-        }
+    
 
         
 
@@ -59,11 +61,11 @@
 
 
 
-        public string ToDisplay()
-        {
-            return $"{numerateur}/{denominateur}";
-        }
+        //public string ToDisplay()
+        //{
+        //    return $"{numerateur}/{denominateur}";
+        //}
 
 
-    }
 }
+

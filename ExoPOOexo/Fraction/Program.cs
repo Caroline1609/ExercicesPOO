@@ -13,7 +13,8 @@ namespace Fraction
 
             Console.WriteLine(f1.ToString());
             Fractions quotient = f1.Divise(f2);
-            Console.WriteLine("Quotient: " + quotient.ToDisplay());
+            Console.WriteLine(f1.EgalA(f2));
+
 
 
 

@@ -32,25 +32,19 @@ namespace ExoPOO
             Console.WriteLine(compte2.ToString());
 
 
-            Console.WriteLine("\tComparer Compte 1 et Compte 2\n");
+            //string mot1 = "tutu";
+            //string mot2 = "rududu";
+            //int r =mot1.CompareTo(mot2);
 
-            ParSolde comparer = new ParSolde();
-            decimal result = comparer.Compare(compte1, compte2);
 
-            Console.WriteLine("\nRésultat de la comparaison :");
-            if (result > 0)
-            {
-                Console.WriteLine("Compte 1 a un solde plus élevé que Compte 2.");
-            }
-            else if (result < 0)
-            {
-                Console.WriteLine("Compte 1 a un solde plus bas que Compte 2.");
-            }
-            else
-            {
-                Console.WriteLine("Compte 1 et Compte 2 ont le même solde.");
-            }
+            int c= compte1.CompareTo(compte2);
 
+            List<CompteBancaire> dreamTeam = new List<CompteBancaire>();
+            dreamTeam.Add(compte2);
+            dreamTeam.Add(compte1);
+            dreamTeam.Sort(new CompteBancaireComparaisonParId());
+
+;
 
             Console.ReadLine();
 

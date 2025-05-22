@@ -4,7 +4,7 @@ using System.Security.Principal;
 
 namespace ClassLibraryCompteBancaire
 {
-    public class CompteBancaire
+    public class CompteBancaire : IComparable,IComparable<CompteBancaire>
     {
         private int numero;
         private string nom;
@@ -14,7 +14,37 @@ namespace ClassLibraryCompteBancaire
         public int Numero { get => numero; }
         public string Nom { get => nom; }
         public decimal Solde { get => solde; }
-        public int DecouvertAutorise { get => decouvertAutorise;}
+        public int DecouvertAutorise { get => decouvertAutorise; }
+
+
+
+ 
+        public int CompareTo(object? obj)
+        {
+            if (obj==null) 
+            { 
+                return 1; 
+            }
+
+            if (!(obj is CompteBancaire))
+            {
+                throw new ArgumentException("obj n'est pas du type CompteBancire attendu", nameof(obj));
+            }
+
+            //CompteBancaire objCB = (CompteBancaire)obj; //cast
+
+            CompteBancaire? objCB2 = obj as CompteBancaire;
+            if (objCB2 != null)
+            {
+                return this.solde.CompareTo(objCB2.Solde);
+                
+            }
+
+            return 1;
+          
+           
+        }
+
 
         //Constructeur par défaut 
         public CompteBancaire() : this(25485245, "Maria", 250.00m, -1000)
@@ -90,14 +120,10 @@ namespace ClassLibraryCompteBancaire
             
         }
 
-        public class ParSolde : IComparer<CompteBancaire>
+        public int CompareTo(CompteBancaire? other)
         {
-            public int Compare(CompteBancaire compte1, CompteBancaire compte2)
-            {
-                return compte1.Solde.CompareTo(compte2.Solde);
-            }
+            throw new NotImplementedException();
         }
-
     }
 
 
