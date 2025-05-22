@@ -22,12 +22,10 @@ namespace Point
             Console.WriteLine("Symétrie par rapport à l'axe des abscisses :");
             Console.WriteLine(symetrieAbscisse.ToString());
 
-            // Appliquer la symétrie par rapport à l'axe des ordonnées
             PointYX symetrieOrdonnee = symetrieAbscisse.SymetrieAxeOrdonnee();
             Console.WriteLine("Symétrie par rapport à l'axe des ordonnées :");
             Console.WriteLine(symetrieOrdonnee.ToString());
 
-            // Appliquer la symétrie par rapport à l'origine
             PointYX symetrieOrigine = symetrieOrdonnee.SymetrieOrigine();
             Console.WriteLine("Symétrie par rapport à l'origine :");
             Console.WriteLine(symetrieOrigine.ToString());
