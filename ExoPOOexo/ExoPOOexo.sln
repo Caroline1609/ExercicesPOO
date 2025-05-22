@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompteBancaire", "ExoPOO\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryCompteBancaire", "ClassLibraryCompteBancaire\ClassLibraryCompteBancaire.csproj", "{C667F02A-8237-4071-BDF3-D5B5E01D5C63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point", "Point\Point.csproj", "{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPoint", "ClassLibraryPoint\ClassLibraryPoint.csproj", "{38594B76-B443-4532-A66C-856B7B2218B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryPoint", "ClassLibraryPoint\ClassLibraryPoint.csproj", "{38594B76-B443-4532-A66C-856B7B2218B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraction", "Fraction\Fraction.csproj", "{618B04C7-EBE8-449C-90F7-3252D1397732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryFraction", "ClassLibraryFraction\ClassLibraryFraction.csproj", "{BD272C56-E477-486F-B30A-21623DD6C580}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryFractions", "ClassLibraryFraction\ClassLibraryFractions.csproj", "{BD272C56-E477-486F-B30A-21623DD6C580}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DPoint", "DPoint", "{BC3807E2-FAA7-43EF-BF21-1463BBE7E892}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3} = {BC3807E2-FAA7-43EF-BF21-1463BBE7E892}
+		{38594B76-B443-4532-A66C-856B7B2218B0} = {BC3807E2-FAA7-43EF-BF21-1463BBE7E892}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15ABBB02-132C-4E81-8045-C03149C38DA2}

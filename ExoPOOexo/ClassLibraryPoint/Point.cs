@@ -8,6 +8,12 @@ namespace ClassLibraryPoint
         private float x;
 
 
+        //Constructeur par défaut 
+        public PointYX() : this(10, 85)
+
+        {
+
+        }
         public PointYX(float x, float y)
         {
             this.x = x;
@@ -49,10 +55,21 @@ namespace ClassLibraryPoint
 
         public PointYX SymetrieOrigine()
         {
-            return new PointYX(-x, -y);
+
+            PointYX pontIntermediaire = this.SymetrieAxeOrdonnee();
+
+            PointYX pointFinal = pontIntermediaire.SymetrieAxeAbscisse();
+            return pointFinal;
         }
 
-        
+        //Constructeur Par Clonage
+        public PointYX(PointYX pointYXACloner) : this(pointYXACloner.x, pointYXACloner.y)
+
+        {
+
+        }
+
+
 
 
 

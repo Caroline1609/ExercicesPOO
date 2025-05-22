@@ -18,26 +18,27 @@ namespace Point
             Console.WriteLine(p1.ToString());
 
 
-            PointYX symetrieAbscisse = p1.SymetrieAxeAbscisse();
-            Console.WriteLine("Symétrie par rapport à l'axe des abscisses :");
-            Console.WriteLine(symetrieAbscisse.ToString());
 
-            PointYX symetrieOrdonnee = symetrieAbscisse.SymetrieAxeOrdonnee();
-            Console.WriteLine("Symétrie par rapport à l'axe des ordonnées :");
-            Console.WriteLine(symetrieOrdonnee.ToString());
+            //PointYX symetrieAbscisse = p1.SymetrieAxeAbscisse();
+            //Console.WriteLine("Symétrie par rapport à l'axe des abscisses :");
+            //Console.WriteLine(symetrieAbscisse.ToString());
 
-            PointYX symetrieOrigine = symetrieOrdonnee.SymetrieOrigine();
-            Console.WriteLine("Symétrie par rapport à l'origine :");
-            Console.WriteLine(symetrieOrigine.ToString());
+            //PointYX symetrieOrdonnee = symetrieAbscisse.SymetrieAxeOrdonnee();
+            //Console.WriteLine("Symétrie par rapport à l'axe des ordonnées :");
+            //Console.WriteLine(symetrieOrdonnee.ToString());
 
-
-
-
-            //PointYX symetrieCombinee = p1.SymetrieAxeAbscisse().SymetrieAxeOrdonnee().SymetrieOrigine();
+            //PointYX symetrieOrigine = symetrieOrdonnee.SymetrieOrigine();
+            //Console.WriteLine("Symétrie par rapport à l'origine :");
+            //Console.WriteLine(symetrieOrigine.ToString());
 
 
-            //Console.WriteLine("Point après application des trois symétries :");
-            //Console.WriteLine(symetrieCombinee.ToString());
+
+
+            PointYX symetrieCombine = p1.SymetrieAxeAbscisse().SymetrieAxeOrdonnee().SymetrieOrigine();
+
+
+            Console.WriteLine("Point après application des trois symétries :");
+            Console.WriteLine(symetrieCombine.ToString());
 
 
 
