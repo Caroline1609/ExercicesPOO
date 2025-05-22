@@ -19,26 +19,9 @@ namespace Point
 
 
 
-            //PointYX symetrieAbscisse = p1.SymetrieAxeAbscisse();
-            //Console.WriteLine("Symétrie par rapport à l'axe des abscisses :");
-            //Console.WriteLine(symetrieAbscisse.ToString());
-
-            //PointYX symetrieOrdonnee = symetrieAbscisse.SymetrieAxeOrdonnee();
-            //Console.WriteLine("Symétrie par rapport à l'axe des ordonnées :");
-            //Console.WriteLine(symetrieOrdonnee.ToString());
-
-            //PointYX symetrieOrigine = symetrieOrdonnee.SymetrieOrigine();
-            //Console.WriteLine("Symétrie par rapport à l'origine :");
-            //Console.WriteLine(symetrieOrigine.ToString());
-
-
-
-
-            PointYX symetrieCombine = p1.SymetrieAxeAbscisse().SymetrieAxeOrdonnee().SymetrieOrigine();
-
-
-            Console.WriteLine("Point après application des trois symétries :");
-            Console.WriteLine(symetrieCombine.ToString());
+            p1.SymetrieOrigine();
+            Console.WriteLine("Origine :");
+            Console.WriteLine(p1.ToString());
 
 
 
