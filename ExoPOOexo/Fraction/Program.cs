@@ -11,16 +11,16 @@ namespace Fraction
             ClassLibraryFraction.Fraction f2 = new ClassLibraryFraction.Fraction(22, 14);
 
 
-            Console.WriteLine($"Fraction 1 : {f1.ToString()}");
-            Console.WriteLine($"Fraction 2 : {f2.ToString()}");
+            Console.WriteLine($"Fraction 1 : {f1.ToDisplay()}");
+            Console.WriteLine($"Fraction 2 : {f2.ToDisplay()}");
             //Fractions quotient = f1.Divise(f2);
 
 
-            //f1.Oppose();
-            //Console.WriteLine(f1.ToString());
+            f1.Oppose();
+            Console.WriteLine($"Fraction 1 : {f1.ToDisplay()}");
 
-            //f1.Inverse();
-            //Console.WriteLine(f1.ToString());
+            f1.Inverse();
+            Console.WriteLine($"Fraction 1 : {f1.ToDisplay()}");
 
             bool estSuperieur = f1.SuperieurA(f2);
             Console.WriteLine($"Supérieure: {estSuperieur}");
@@ -32,6 +32,8 @@ namespace Fraction
 
 
 
+
+        https://www.kartable.fr/ressources/mathematiques/cours/les-fractions-8/60023
 
 
 

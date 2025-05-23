@@ -10,7 +10,7 @@
         public int Denominateur { get => denominateur; }
 
 
-        public Fraction() : this(1,2)
+        public Fraction() : this(1,2) //constructeur par defaut
         {
 
         }
@@ -19,7 +19,6 @@
         {
             this.numerateur = numerateur;
             this.denominateur = denominateur;
-
         }
 
         public string ToString()
@@ -103,6 +102,10 @@
 
         }
 
+        public string ToDisplay()
+        {
+            return $"{numerateur}/{denominateur}";
+        }
 
 
 
@@ -129,7 +132,8 @@
 
 
 
-        public Fraction(Fraction fractionACloner) : this(fractionACloner.numerateur, fractionACloner.denominateur)
+
+        public Fraction(Fraction fractionACloner) : this(fractionACloner.numerateur, fractionACloner.denominateur) //constructeur par clonage
         {
 
         }
@@ -160,10 +164,7 @@
 
 
 
-        //public string ToDisplay()
-        //{
-        //    return $"{numerateur}/{denominateur}";
-        //}
+        
 
 
 }
