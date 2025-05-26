@@ -5,12 +5,11 @@
         private int numerateur;
         private int denominateur;
 
-
         public int Numerateur { get => numerateur; }
         public int Denominateur { get => denominateur; }
 
 
-        public Fraction() : this(1, 2) //constructeur par defaut
+        public Fraction() : this(0, 1) //constructeur par defaut
         {
 
         }
@@ -22,33 +21,35 @@
             this.denominateur = denominateur;
         }
 
+        public Fraction(Fraction fractionACloner) : this(fractionACloner.numerateur, fractionACloner.denominateur) //constructeur par clonage
+        {
+
+        }
+
         public string ToString()
         {
-            Reduire();
-            return $"{numerateur}/{denominateur}";
-
-
+            return $"Numerateur : {numerateur}/ Denominateur : {denominateur}";
         }
 
         public Fraction Plus(Fraction autreFraction)
         {
-            return new Fraction(Numerateur * autreFraction.Denominateur + autreFraction.Numerateur * Denominateur, Denominateur * autreFraction.Denominateur);
+            return new Fraction(numerateur * autreFraction.denominateur + autreFraction.numerateur * denominateur, denominateur * autreFraction.denominateur);
         }
 
         public Fraction Moins(Fraction autreFraction)
         {
-            return new Fraction(Numerateur * autreFraction.Denominateur - autreFraction.Numerateur * Denominateur, Denominateur * autreFraction.Denominateur);
+            return new Fraction(numerateur * autreFraction.denominateur - autreFraction.numerateur * denominateur, denominateur * autreFraction.denominateur);
         }
 
         public Fraction Multiplie(Fraction autreFraction)
         {
-            return new Fraction(Numerateur * autreFraction.Numerateur, Denominateur * autreFraction.Denominateur);
+            return new Fraction(numerateur * autreFraction.numerateur, denominateur * autreFraction.denominateur);
         }
 
         public Fraction Diviser(Fraction autre)
         {
 
-            Fraction inverse = new Fraction(autre.Denominateur, autre.Numerateur);
+            Fraction inverse = new Fraction(autre.denominateur, autre.numerateur);
             return Multiplie(inverse);
         }
 
@@ -100,60 +101,49 @@
             return pgcd;
         }
 
-        private void Reduire()
+        public void Reduire()
         {
+            
             int pgcd = GetPgcd();
-            this.numerateur /= pgcd;
-            this.denominateur /= pgcd;
 
-            if (denominateur < 0)
+            if (pgcd != 0)
             {
-                numerateur = -numerateur;
-                denominateur = -denominateur;
+                numerateur /= pgcd;
+                denominateur /= pgcd;
+
+                
+                if (denominateur < 0)
+                {
+                    numerateur = -numerateur;
+                    denominateur = -denominateur;
+                }
             }
         }
 
-        public bool SuperieurA(Fraction autreFraction)
-        {
-            bool resultat;
 
-            if (this.numerateur * autreFraction.denominateur > autreFraction.numerateur * this.denominateur)
-            {
-                resultat = true;
-            }
-            else
-            {
-                resultat = false;
-            }
-            return resultat;
-        }
-
-        public bool EgalA(Fraction autreFraction)
-        {
-            bool resultat;
-
-            if (this.numerateur * autreFraction.denominateur == autreFraction.numerateur * this.denominateur)
-            {
-                resultat = true;
-            }
-            else
-            {
-                resultat = false;
-            }
-            return resultat;
-
-        }
 
         public string ToDisplay()
         {
-            return $"{numerateur}/{denominateur}";
+            if (denominateur == 1)
+            {
+                return $"{numerateur}";
+            }
+            else if (numerateur == 0)
+            {
+                return "0";
+            }
+            else if (numerateur == 1)
+            {
+                return $"1/{denominateur}";
+            }
+            else
+            {
+                return $"{numerateur}/{denominateur}";
+            }
         }
 
 
-        public Fraction(Fraction fractionACloner) : this(fractionACloner.numerateur, fractionACloner.denominateur) //constructeur par clonage
-        {
 
-        }
 
 
 
