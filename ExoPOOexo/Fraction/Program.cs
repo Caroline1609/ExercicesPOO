@@ -12,7 +12,7 @@ namespace Fraction1
 
             
             f1 = f1.Plus(f2);
-            Console.WriteLine($"Addition: {f1.ToDisplay()} + {f2.ToDisplay()} = {f1.ToDisplay()}");
+            Console.WriteLine($"Addition: {f1.ToDisplay()} + {f2.ToDisplay()} = {f1.ToString()}");
         }
 
     }
