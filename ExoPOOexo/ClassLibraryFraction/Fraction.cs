@@ -52,6 +52,8 @@
             return Multiplie(inverse);
         }
 
+
+
         public void Oppose()
         {
             this.numerateur = -this.numerateur;
@@ -111,7 +113,36 @@
             }
         }
 
-        
+        public bool SuperieurA(Fraction autreFraction)
+        {
+            bool resultat;
+
+            if (this.numerateur * autreFraction.denominateur > autreFraction.numerateur * this.denominateur)
+            {
+                resultat = true;
+            }
+            else
+            {
+                resultat = false;
+            }
+            return resultat;
+        }
+
+        public bool EgalA(Fraction autreFraction)
+        {
+            bool resultat;
+
+            if (this.numerateur * autreFraction.denominateur == autreFraction.numerateur * this.denominateur)
+            {
+                resultat = true;
+            }
+            else
+            {
+                resultat = false;
+            }
+            return resultat;
+
+        }
 
         public string ToDisplay()
         {

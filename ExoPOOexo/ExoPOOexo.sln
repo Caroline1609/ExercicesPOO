@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point", "Point\Point.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryPoint", "ClassLibraryPoint\ClassLibraryPoint.csproj", "{38594B76-B443-4532-A66C-856B7B2218B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryFractions", "ClassLibraryFraction\ClassLibraryFractions.csproj", "{BD272C56-E477-486F-B30A-21623DD6C580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryFraction", "ClassLibraryFraction\ClassLibraryFraction.csproj", "{BD272C56-E477-486F-B30A-21623DD6C580}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DPoint", "DPoint", "{BC3807E2-FAA7-43EF-BF21-1463BBE7E892}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DCompteBancaire", "DCompteBancaire", "{AE92F1E0-22D6-412D-A856-6292EBE6C659}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DFraction", "DFraction", "{DD0C4722-579C-4DBD-B317-24858FB24958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraction", "Fraction\Fraction.csproj", "{B989994D-2861-4987-9249-6E6093F9FF1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{BD272C56-E477-486F-B30A-21623DD6C580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD272C56-E477-486F-B30A-21623DD6C580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD272C56-E477-486F-B30A-21623DD6C580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B989994D-2861-4987-9249-6E6093F9FF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B989994D-2861-4987-9249-6E6093F9FF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B989994D-2861-4987-9249-6E6093F9FF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B989994D-2861-4987-9249-6E6093F9FF1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{9C9C06E5-789A-495E-9D3A-D7D271E7E3A3} = {BC3807E2-FAA7-43EF-BF21-1463BBE7E892}
 		{38594B76-B443-4532-A66C-856B7B2218B0} = {BC3807E2-FAA7-43EF-BF21-1463BBE7E892}
 		{BD272C56-E477-486F-B30A-21623DD6C580} = {DD0C4722-579C-4DBD-B317-24858FB24958}
+		{B989994D-2861-4987-9249-6E6093F9FF1D} = {DD0C4722-579C-4DBD-B317-24858FB24958}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15ABBB02-132C-4E81-8045-C03149C38DA2}
