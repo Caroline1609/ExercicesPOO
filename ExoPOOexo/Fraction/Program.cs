@@ -1,6 +1,6 @@
 ﻿using ClassLibraryFraction;
 
-namespace Fraction
+namespace Fraction1
 {
     internal class Program
     {
@@ -10,7 +10,8 @@ namespace Fraction
             Fraction f2 = new Fraction(3, 4);
 
 
-            Fraction f1 = f1.Plus(f2);
+            
+            f1 = f1.Plus(f2);
             Console.WriteLine($"Addition: {f1.ToDisplay()} + {f2.ToDisplay()} = {f1.ToDisplay()}");
         }
 
