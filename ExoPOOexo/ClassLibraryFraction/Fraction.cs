@@ -17,14 +17,50 @@
 
         public Fraction(int numerateur, int denominateur)
         {
+            if (denominateur == 0)
+            {
+                throw new ArgumentException("Le dénominateur ne peut pas être zéro.");
+            }
+
             this.numerateur = numerateur;
             this.denominateur = denominateur;
         }
 
         public string ToString()
         {
-            return $"{this.numerateur}/{denominateur}"; //a modifier
-        }  
+            Reduire();
+            return $"{numerateur}/{denominateur}";
+
+
+        }
+
+        public Fraction Plus(Fraction autreFraction)
+        {
+            return new Fraction(Numerateur * autreFraction.Denominateur + autreFraction.Numerateur * Denominateur, Denominateur * autreFraction.Denominateur);
+        }
+
+        public Fraction Moins(Fraction autreFraction)
+        {
+            return new Fraction(Numerateur * autreFraction.Denominateur - autreFraction.Numerateur * Denominateur, Denominateur * autreFraction.Denominateur);
+        }
+
+        public Fraction Multiplie(Fraction autreFraction)
+        {
+            return new Fraction(Numerateur * autreFraction.Numerateur, Denominateur * autreFraction.Denominateur);
+        }
+
+        public Fraction Diviser(Fraction autre)
+        {
+            if (autre.Numerateur == 0)
+            {
+                throw new ArgumentException("Impossible de diviser par une fraction avec un numérateur de zéro.");
+            }
+
+            Fraction inverse = new Fraction(autre.Denominateur, autre.Numerateur);
+            return Multiplie(inverse);
+        }
+
+
 
         public void Oppose()
         {
@@ -33,12 +69,13 @@
 
         public void Inverse()
         {
+
             int temp = this.numerateur;
             this.numerateur = this.denominateur;
             this.denominateur = temp;
         }
 
-        private int getPgcd()
+        private int GetPgcd()
         {
             int a = this.numerateur;
             int b = this.denominateur;
@@ -69,6 +106,19 @@
             }
 
             return pgcd;
+        }
+
+        private void Reduire()
+        {
+            int pgcd = GetPgcd();
+            this.numerateur /= pgcd;
+            this.denominateur /= pgcd;
+
+            if (denominateur < 0)
+            {
+                numerateur = -numerateur;
+                denominateur = -denominateur;
+            }
         }
 
         public bool SuperieurA(Fraction autreFraction)
