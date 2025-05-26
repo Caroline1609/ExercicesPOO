@@ -1,6 +1,4 @@
 ﻿using ClassLibraryCompteBancaire;
-using System;
-using static ClassLibraryCompteBancaire.CompteBancaire;
 
 namespace ExoPOO
 {
@@ -37,14 +35,14 @@ namespace ExoPOO
             //int r =mot1.CompareTo(mot2);
 
 
-            int c= compte1.CompareTo(compte2);
+            int c = compte1.CompareTo(compte2);
 
             List<CompteBancaire> dreamTeam = new List<CompteBancaire>();
             dreamTeam.Add(compte2);
             dreamTeam.Add(compte1);
             dreamTeam.Sort(new CompteBancaireComparaisonParId());
 
-;
+            ;
 
             Console.ReadLine();
 

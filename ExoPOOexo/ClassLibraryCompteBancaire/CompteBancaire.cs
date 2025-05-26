@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Reflection.Metadata;
-using System.Security.Principal;
-
-namespace ClassLibraryCompteBancaire
+﻿namespace ClassLibraryCompteBancaire
 {
-    public class CompteBancaire : IComparable,IComparable<CompteBancaire>
+    public class CompteBancaire : IComparable, IComparable<CompteBancaire>
     {
         private int numero;
         private string nom;
@@ -18,12 +14,12 @@ namespace ClassLibraryCompteBancaire
 
 
 
- 
+
         public int CompareTo(object? obj)
         {
-            if (obj==null) 
-            { 
-                return 1; 
+            if (obj == null)
+            {
+                return 1;
             }
 
             if (!(obj is CompteBancaire))
@@ -37,12 +33,12 @@ namespace ClassLibraryCompteBancaire
             if (objCB2 != null)
             {
                 return this.solde.CompareTo(objCB2.Solde);
-                
+
             }
 
             return 1;
-          
-           
+
+
         }
 
 
@@ -61,7 +57,7 @@ namespace ClassLibraryCompteBancaire
 
         }
 
-        public CompteBancaire (int numero, string nom, decimal solde, int decouvertAutorise)
+        public CompteBancaire(int numero, string nom, decimal solde, int decouvertAutorise)
         {
             this.numero = numero;
             this.nom = nom;
@@ -92,7 +88,7 @@ namespace ClassLibraryCompteBancaire
             }
             else
             {
-                return false; 
+                return false;
             }
 
         }
@@ -117,7 +113,7 @@ namespace ClassLibraryCompteBancaire
                 return result;
             }
 
-            
+
         }
 
         public int CompareTo(CompteBancaire? other)
@@ -128,5 +124,5 @@ namespace ClassLibraryCompteBancaire
 
 
 
-    }
+}
 

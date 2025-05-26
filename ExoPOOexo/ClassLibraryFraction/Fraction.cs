@@ -10,17 +10,13 @@
         public int Denominateur { get => denominateur; }
 
 
-        public Fraction() : this(1,2) //constructeur par defaut
+        public Fraction() : this(1, 2) //constructeur par defaut
         {
 
         }
 
         public Fraction(int numerateur, int denominateur)
         {
-            if (denominateur == 0)
-            {
-                throw new ArgumentException("Le dénominateur ne peut pas être zéro.");
-            }
 
             this.numerateur = numerateur;
             this.denominateur = denominateur;
@@ -51,10 +47,6 @@
 
         public Fraction Diviser(Fraction autre)
         {
-            if (autre.Numerateur == 0)
-            {
-                throw new ArgumentException("Impossible de diviser par une fraction avec un numérateur de zéro.");
-            }
 
             Fraction inverse = new Fraction(autre.Denominateur, autre.Numerateur);
             return Multiplie(inverse);
@@ -148,7 +140,7 @@
             {
                 resultat = false;
             }
-            return resultat;                   
+            return resultat;
 
         }
 
@@ -156,31 +148,6 @@
         {
             return $"{numerateur}/{denominateur}";
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         public Fraction(Fraction fractionACloner) : this(fractionACloner.numerateur, fractionACloner.denominateur) //constructeur par clonage
@@ -202,11 +169,6 @@
 
     }
 
-    
-
-        
-
-        
 
 
 
@@ -214,7 +176,12 @@
 
 
 
-        
+
+
+
+
+
+
 
 
 }

@@ -1,6 +1,4 @@
 ﻿using ClassLibraryPoint;
-using System;
-using System.Drawing;
 
 namespace Point
 {
@@ -29,7 +27,7 @@ namespace Point
 
 
             Console.ReadLine();
-            
+
         }
     }
 }
