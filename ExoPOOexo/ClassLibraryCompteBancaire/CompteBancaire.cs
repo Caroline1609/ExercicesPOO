@@ -99,18 +99,18 @@
         }
 
 
-        public bool Transferer(CompteBancaire beneficiary, decimal montantAtransferer)
+        public bool Transferer(CompteBancaire beneficiaire, decimal montantAtransferer)
         {
-            bool result = this.Debiter(montantAtransferer);
+            bool resultat = this.Debiter(montantAtransferer);
 
-            if (result)
+            if (resultat)
             {
-                beneficiary.Crediter(montantAtransferer);
+                beneficiaire.Crediter(montantAtransferer);
                 return true;
             }
             else
             {
-                return result;
+                return resultat;
             }
 
 

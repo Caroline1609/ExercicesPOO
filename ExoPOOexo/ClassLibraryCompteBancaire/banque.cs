@@ -9,7 +9,6 @@ namespace ClassLibraryCompteBancaire
     public class Banque
     {
         private List<CompteBancaire> mesComptes;
-
         private string nom;
         private string ville;
 
@@ -74,6 +73,22 @@ namespace ClassLibraryCompteBancaire
             }
             return null;
         }
+
+        public bool Transferer(int numDebitaire, int numBeneficiaire, decimal montant)
+        {
+            CompteBancaire Debitaire = RendCompte(numDebitaire);
+            CompteBancaire beneficiaire = RendCompte(numBeneficiaire);
+
+            if ()
+            {
+
+            }
+
+
+
+        }
+
+        
 
 
 
