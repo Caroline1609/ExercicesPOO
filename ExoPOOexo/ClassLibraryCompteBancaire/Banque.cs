@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,10 +19,6 @@ namespace ClassLibraryCompteBancaire
         public string Ville { get => ville; }
 
 
-        public Banque(Banque banqueACloner) : this(banqueACloner.mesComptes, banqueACloner.nom, banqueACloner.ville)
-        {
-
-        }
 
 
         public Banque(List<CompteBancaire> mesComptes, string nom, string ville)
@@ -46,47 +43,76 @@ namespace ClassLibraryCompteBancaire
 
 
         public CompteBancaire CompteSup()
-        { 
+        {
+
+            if (mesComptes.Count == 0)
+            {
+                return null;
+            }
+
             CompteBancaire compteMax = mesComptes[0];
 
-            foreach (var compte in mesComptes)
+            int i = 1;
+
+            while (i < mesComptes.Count)
             {
-                if (compte.Solde > compteMax.Solde)
+                if (mesComptes[i].Solde > compteMax.Solde)
                 {
-                    compteMax = compte;
+
+                    compteMax = mesComptes[i];
                 }
-                    
+                i++;
             }
 
             return compteMax;
         }
 
-        public CompteBancaire RendCompte(int numero)
-        {
-            foreach (var compte in mesComptes)
-            {
-                if (compte.Numero == numero)
-                {
-                    return compte;
-                }
+
+
+
+
+
+
+        //CompteBancaire compteMax = mesComptes[0];
+
+        //foreach (var compte in mesComptes)
+        //{
+        //    if (compte.Solde > compteMax.Solde)
+        //    {
+        //        compteMax = compte;
+        //    }
+
+        //}
+
+        //return compteMax;
+    }
+
+        //public CompteBancaire? RendCompte(int numero)
+        //{
+        //    foreach (var compte in mesComptes)
+        //    {
+        //        if (compte.Numero == numero)
+        //        {
+        //            return compte;
+        //        }
                     
-            }
-            return null;
-        }
+        //    }
+        //    return null;
+        //}
 
-        public bool Transferer(int numDebitaire, int numBeneficiaire, decimal montant)
-        {
-            CompteBancaire Debitaire = RendCompte(numDebitaire);
-            CompteBancaire beneficiaire = RendCompte(numBeneficiaire);
+        //public bool Transferer(int numDebitaire, int numBeneficiaire, decimal montant)
+        //{
+        //    CompteBancaire Debitaire = RendCompte(numDebitaire);
+        //    CompteBancaire beneficiaire = RendCompte(numBeneficiaire);
+            
+        //    if(numDebitaire.Solde)
+        //    {
+                
+        //    }
 
-            if (Debitaire )
-            {
-
-            }
 
 
-
-        }
+        //}
 
         
 
@@ -102,4 +128,3 @@ namespace ClassLibraryCompteBancaire
 
 
     }
-}
