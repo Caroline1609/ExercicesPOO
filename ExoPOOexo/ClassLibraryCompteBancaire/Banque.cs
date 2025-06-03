@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -66,8 +67,13 @@ namespace ClassLibraryCompteBancaire
             return compteMax;
         }
 
-        public CompteBancaire RendCompte(int numero)
+        public CompteBancaire? RendCompte(int numero)
         {
+
+            if (numero == 0)
+            {
+                throw new ArgumentException("Erreur");
+            }
 
             int i = 0;
 
@@ -84,19 +90,25 @@ namespace ClassLibraryCompteBancaire
             return null;
         }
 
-        public bool Transferer(int compteDebiteur, int numeroBeneficiaire, decimal montant)
-        {
 
-            CompteBancaire compteSource = RendCompte(compteDebiteur);
-            CompteBancaire compteDestination = RendCompte(numeroBeneficiaire);
 
-            if (compteSource == null || compteDestination == null)
-            {
-                return false;
-            }
 
-            return compteSource.Transferer(compteDestination, montant);
-        }
+
+
+
+        //public bool Transferer(int compteDebiteur, int numeroBeneficiaire, decimal montant)
+        //{
+
+        //    CompteBancaire compteSource = RendCompte(compteDebiteur);
+        //    CompteBancaire compteDestination = RendCompte(numeroBeneficiaire);
+
+        //    if (compteSource == null || compteDestination == null)
+        //    {
+        //        return false;
+        //    }
+
+        //    return compteSource.Transferer(compteDestination, montant);
+        //}
 
        
 

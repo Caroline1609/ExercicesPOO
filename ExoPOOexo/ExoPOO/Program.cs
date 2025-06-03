@@ -55,22 +55,31 @@ namespace ExoPOO
 
 
             Console.WriteLine("\n\tTrouvez le compte");
-            CompteBancaire compteTrouve = b1.RendCompte(26854);
+            CompteBancaire compteTrouve = b1.RendCompte(085);
             Console.WriteLine(compteTrouve == null ? "Aucun compte trouvé." : compteTrouve);
 
-            Console.WriteLine("\n\tTransfère Argent");
-            if(b1.Transferer(15515, 17895, 100m))
-            {
-                Console.WriteLine("Transfere réussi");
-
-            }
-            else
-            {
-                Console.WriteLine("Transfere impossible");
-            }
 
 
-            Console.WriteLine(b1.ToString);
+
+
+
+
+
+
+
+            //Console.WriteLine("\n\tTransfère Argent");
+            //if(b1.Transferer(15515, 17895, 100m))
+            //{
+            //    Console.WriteLine("Transfere réussi");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Transfere impossible");
+            //}
+
+
+            
 
 
             Console.ReadLine();
