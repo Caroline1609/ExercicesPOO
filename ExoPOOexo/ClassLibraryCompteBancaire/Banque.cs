@@ -42,9 +42,8 @@ namespace ClassLibraryCompteBancaire
         }
 
 
-        public CompteBancaire CompteSup()
+        public CompteBancaire? CompteSup()
         {
-
             if (mesComptes.Count == 0)
             {
                 return null;
@@ -67,64 +66,46 @@ namespace ClassLibraryCompteBancaire
             return compteMax;
         }
 
+        public CompteBancaire RendCompte(int numero)
+        {
 
+            int i = 0;
 
+            while (i < mesComptes.Count)
+            {
+                if (mesComptes[i].Numero == numero)
+                {
+                    return mesComptes[i];
+                }
 
+                i++;
+            }
 
+            return null;
+        }
 
+        public bool Transferer(int compteDebiteur, int numeroBeneficiaire, decimal montant)
+        {
 
-        //CompteBancaire compteMax = mesComptes[0];
+            CompteBancaire compteSource = RendCompte(compteDebiteur);
+            CompteBancaire compteDestination = RendCompte(numeroBeneficiaire);
 
-        //foreach (var compte in mesComptes)
-        //{
-        //    if (compte.Solde > compteMax.Solde)
-        //    {
-        //        compteMax = compte;
-        //    }
+            if (compteSource == null || compteDestination == null)
+            {
+                return false;
+            }
 
-        //}
+            return compteSource.Transferer(compteDestination, montant);
+        }
 
-        //return compteMax;
-    }
-
-        //public CompteBancaire? RendCompte(int numero)
-        //{
-        //    foreach (var compte in mesComptes)
-        //    {
-        //        if (compte.Numero == numero)
-        //        {
-        //            return compte;
-        //        }
-                    
-        //    }
-        //    return null;
-        //}
-
-        //public bool Transferer(int numDebitaire, int numBeneficiaire, decimal montant)
-        //{
-        //    CompteBancaire Debitaire = RendCompte(numDebitaire);
-        //    CompteBancaire beneficiaire = RendCompte(numBeneficiaire);
-            
-        //    if(numDebitaire.Solde)
-        //    {
-                
-        //    }
-
-
-
-        //}
-
-        
-
-
-
-
-
-
-
-
-
-
-
+       
 
     }
+}
+
+
+
+    
+
+
+
