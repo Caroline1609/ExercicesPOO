@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ClassLibraryCompteBancaire
 {
@@ -28,7 +29,6 @@ namespace ClassLibraryCompteBancaire
             this.nom = nom;
             this.ville = ville;
         }
-
 
         public void AjouteCompte(int numero, string nom, decimal solde, int decouvertAutorise)
         {
@@ -70,47 +70,58 @@ namespace ClassLibraryCompteBancaire
         public CompteBancaire? RendCompte(int numero)
         {
 
-            if (numero == 0)
+            if (numero <= 0)
             {
-                throw new ArgumentException("Erreur");
+                throw new ArgumentException(nameof(numero), "Le numéro de compte doit être supérieur à zéro.");
             }
 
             int i = 0;
 
-            while (i < mesComptes.Count)
-            {
-                if (mesComptes[i].Numero == numero)
+                while (i < mesComptes.Count)
                 {
-                    return mesComptes[i];
+                    if (mesComptes[i].Numero == numero)
+                    {
+                        return mesComptes[i];
+                    }
+
+                    i++;
                 }
 
-                i++;
+                return null;
+        }
+
+        public override string ToString()
+        {
+            string resultat = $"\n==)La banque {nom} de la ville de {ville}\n\nListe des Comptes :\n";
+
+            foreach (var compte in mesComptes)
+            {
+                resultat += compte.ToString() + "\n";
             }
 
-            return null;
+            return resultat;
+        }
+
+        public bool Transferer(int compteDebiteur, int numeroBeneficiaire, decimal montant)
+        {
+
+            if (montant <= 0)
+            {
+                throw new ArgumentException(nameof(montant), "Le montant à transferer doit être supérieur à zéro.");
+            }
+
+            CompteBancaire compteSource = RendCompte(compteDebiteur);
+            CompteBancaire compteDestination = RendCompte(numeroBeneficiaire);
+
+            if (compteSource == null || compteDestination == null)
+            {
+                return false;
+            }
+
+            return compteSource.Transferer(compteDestination, montant);
         }
 
 
-
-
-
-
-
-        //public bool Transferer(int compteDebiteur, int numeroBeneficiaire, decimal montant)
-        //{
-
-        //    CompteBancaire compteSource = RendCompte(compteDebiteur);
-        //    CompteBancaire compteDestination = RendCompte(numeroBeneficiaire);
-
-        //    if (compteSource == null || compteDestination == null)
-        //    {
-        //        return false;
-        //    }
-
-        //    return compteSource.Transferer(compteDestination, montant);
-        //}
-
-       
 
     }
 }

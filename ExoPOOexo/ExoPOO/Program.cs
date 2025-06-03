@@ -47,6 +47,10 @@ namespace ExoPOO
             b1.AjouteCompte(25185, "Bob", 200m, -1000);
             b1.AjouteCompte(26854, "Bruno Méchant", 8550m, -500);
             b1.AjouteCompte(17895, "Caroline", 400m, -1000);
+            b1.AjouteCompte(26854, "Damien Méchant", 450m, -500);
+
+
+            Console.WriteLine(b1.ToString());
 
 
             CompteBancaire compteSup = b1.CompteSup();
@@ -55,31 +59,26 @@ namespace ExoPOO
 
 
             Console.WriteLine("\n\tTrouvez le compte");
-            CompteBancaire compteTrouve = b1.RendCompte(085);
+            CompteBancaire compteTrouve = b1.RendCompte(26854);
             Console.WriteLine(compteTrouve == null ? "Aucun compte trouvé." : compteTrouve);
 
 
+            Console.WriteLine("\n\tTransfère Argent");
+            if (b1.Transferer(15515, 17895, 100m))
+            {
+                Console.WriteLine("Transfère réussi");
+
+
+            }
+            else
+            {
+                Console.WriteLine("Transfère impossible");
+            }
 
 
 
 
 
-
-
-
-            //Console.WriteLine("\n\tTransfère Argent");
-            //if(b1.Transferer(15515, 17895, 100m))
-            //{
-            //    Console.WriteLine("Transfere réussi");
-
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Transfere impossible");
-            //}
-
-
-            
 
 
             Console.ReadLine();
