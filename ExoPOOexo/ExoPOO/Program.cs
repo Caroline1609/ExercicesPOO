@@ -43,10 +43,10 @@ namespace ExoPOO
 
             Banque b1 = new Banque(new List<CompteBancaire>(), "Crédit Mutuel", "Mulhouse");
 
-            b1.AjouteCompte(15515, "Alice", 100m, 500);
-            b1.AjouteCompte(25185, "Bob", 200m, 1000);
-            b1.AjouteCompte(26854, "Bruno Méchant", 50m, 500);
-            b1.AjouteCompte(17895, "Caroline", 400m, 1000);
+            b1.AjouteCompte(15515, "Alice", 100m, -500);
+            b1.AjouteCompte(25185, "Bob", 200m, -1000);
+            b1.AjouteCompte(26854, "Bruno Méchant", 8550m, -500);
+            b1.AjouteCompte(17895, "Caroline", 400m, -1000);
 
 
             CompteBancaire compteSup = b1.CompteSup();
