@@ -14,6 +14,8 @@ namespace Jeu421
 
             Console.WriteLine("après le lancer : " + d1.NumeroFace);
 
+            
+
         }
     }
 }

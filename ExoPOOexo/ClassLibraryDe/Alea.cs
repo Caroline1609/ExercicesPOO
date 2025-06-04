@@ -10,7 +10,9 @@ namespace ClassLibraryDe
     {
         private static Alea monAlea = null;
 
-        private Alea() { }
+        private Alea() {
+
+        }
 
         public static Alea Instance()
         {
