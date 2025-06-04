@@ -3,28 +3,22 @@
     public class De
     {
         private int numeroFace;
-        private readonly int nbFaceMax;
+        private readonly int nbFaceMax = 6;
 
         public int NumeroFace { get => numeroFace;}
 
 
-        public De(int nbFaceMax)
+        public De()
         {
 
-            if (nbFaceMax < 1)
-            {
-                throw new ArgumentException("Le nombre de faces doit être supérieur à 0.");
-            }
-
-            this.nbFaceMax = nbFaceMax;
-            this.numeroFace = 1;
+            Jeter();
 
         }
 
         public void Jeter()
         {
-            Random de = new Random();
-            this.numeroFace = de.Next(1, this.nbFaceMax + 1);
+            Alea alea = Alea.Instance();
+            numeroFace = alea.Nouveau(1, nbFaceMax);
         }
 
         public string ToString()

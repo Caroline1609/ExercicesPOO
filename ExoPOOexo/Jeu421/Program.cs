@@ -7,23 +7,13 @@ namespace Jeu421
     {
         static void Main(string[] args)
         {
-            De de1 = new De(6);
-            De de2 = new De(6);
-            De de3= new De(6);
 
+            De d1 = new De();
 
-            de1.Jeter();
-            de2.Jeter();
-            de3.Jeter();
+            d1.Jeter();
 
+            Console.WriteLine("après le lancer : " + d1.NumeroFace);
 
-
-
-            Console.WriteLine("Valeur du dé après le lancer: " + de1.ToString());
-            Console.WriteLine("Valeur du dé après le lancer: " + de2.ToString());
-            Console.WriteLine("Valeur du dé après le lancer: " + de3.ToString());
-
-            
         }
     }
 }

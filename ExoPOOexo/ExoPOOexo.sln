@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jeu421", "Jeu421", "{4F1323
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jeu421", "Jeu421\Jeu421.csproj", "{BDDC3895-8661-479B-B52F-D5E1F7125A74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDe", "ClassLibraryDe\ClassLibraryDe.csproj", "{B3CA3111-BB1C-4BEA-BDE3-C54A8A33CFC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryJeu421", "ClassLibraryDe\ClassLibraryJeu421.csproj", "{B3CA3111-BB1C-4BEA-BDE3-C54A8A33CFC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
