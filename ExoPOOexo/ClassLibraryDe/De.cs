@@ -1,6 +1,6 @@
 ﻿namespace ClassLibraryDe
 {
-    public class De
+    public class De:IComparable
     {
         private int numeroFace;
         private readonly int nbFaceMax = 6;
@@ -26,6 +26,14 @@
             return this.numeroFace.ToString();
         }
 
+        public int CompareTo(De? orther)
+        {
+            if (orther == null)
+            {
+                return 1;
+            }
+            return 
+        }
         
 
 
