@@ -35,7 +35,7 @@ namespace ClassLibraryManche
         public void Lance(int numeroUn)
         {
             mes3des[numeroUn - 1].Jeter();
-            nbLanceDejaLance++;
+            IncrementerLancer();
         }
 
         public bool AEncoreUnLancer()
