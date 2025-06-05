@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryDe", "ClassLibr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryManche", "ClassLibraryManche\ClassLibraryManche.csproj", "{2993261D-FBAE-419A-B579-E77440E8D64A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDu421", "JeuDu421\JeuDu421.csproj", "{EC6ED770-31E9-43ED-AD6A-AD507BAAC59F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{2993261D-FBAE-419A-B579-E77440E8D64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2993261D-FBAE-419A-B579-E77440E8D64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2993261D-FBAE-419A-B579-E77440E8D64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6ED770-31E9-43ED-AD6A-AD507BAAC59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6ED770-31E9-43ED-AD6A-AD507BAAC59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6ED770-31E9-43ED-AD6A-AD507BAAC59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6ED770-31E9-43ED-AD6A-AD507BAAC59F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{B989994D-2861-4987-9249-6E6093F9FF1D} = {DD0C4722-579C-4DBD-B317-24858FB24958}
 		{B3CA3111-BB1C-4BEA-BDE3-C54A8A33CFC4} = {4F132365-B442-4C23-9148-F33EB7B72617}
 		{2993261D-FBAE-419A-B579-E77440E8D64A} = {4F132365-B442-4C23-9148-F33EB7B72617}
+		{EC6ED770-31E9-43ED-AD6A-AD507BAAC59F} = {4F132365-B442-4C23-9148-F33EB7B72617}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15ABBB02-132C-4E81-8045-C03149C38DA2}
