@@ -2,7 +2,7 @@
 
 namespace ClassLibraryManche
 {
-    internal class Manche
+    public class Manche
     {
         private const int nbrDeLancerMax = 3;
         private int nbLanceDejaLance;
@@ -22,14 +22,14 @@ namespace ClassLibraryManche
                 d.Jeter();
 
             }
-            nbLanceDejaLance++;
+            IncrementerLancer();
         }
 
         public void Lance(int numeroUn, int numeroDeux)
         {
             mes3des[numeroUn - 1].Jeter();
             mes3des[numeroDeux - 1].Jeter();
-            nbLanceDejaLance++;
+            IncrementerLancer();
         }
 
         public void Lance(int numeroUn)
@@ -43,9 +43,16 @@ namespace ClassLibraryManche
             return nbLanceDejaLance < nbrDeLancerMax;
         }
 
+        private void IncrementerLancer()
+        {
+            nbLanceDejaLance++;
+        }
+
         public bool EstGagne()
         {
-            
+            Trier();
+            return mes3des[0].NumeroFace == mes3des[1].NumeroFace &&
+                   mes3des[1].NumeroFace == mes3des[2].NumeroFace;
         }
 
         public void Trier()

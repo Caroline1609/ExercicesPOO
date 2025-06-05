@@ -1,9 +1,9 @@
 ﻿namespace ClassLibraryDe
 {
-    public class De:IComparable
+    public class De:IComparable<De>
     {
         private int numeroFace;
-        private readonly int nbFaceMax = 6;
+        private const int nbFaceMax = 6;
 
         public int NumeroFace { get => numeroFace;}
 
@@ -32,7 +32,7 @@
             {
                 return 1;
             }
-            return 
+            return this.numeroFace.CompareTo(numeroFace); ; 
         }
         
 
