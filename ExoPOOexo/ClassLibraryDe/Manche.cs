@@ -19,18 +19,26 @@ namespace ClassLibraryJeu421
 
         //public bool EstGagner()
         //{
-        //    if (true)
+        //    if ()
         //    {
-                
+
         //    }
         //}
+
 
         public void Lancer()
         {
             De[] des = new De[3];
 
+            for (int i = 0; i < des.Length; i++)
+            {
+                des[i] = new De();
+            }
+
             
+
         }
+
 
         public bool AEncoreUnLance()
         {
