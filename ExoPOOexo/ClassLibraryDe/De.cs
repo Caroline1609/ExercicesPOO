@@ -1,63 +1,38 @@
 ﻿namespace ClassLibraryDe
 {
-    public class De:IComparable<De>
+    public class De : IComparable<De>
     {
+        //attributs
         private int numeroFace;
-        private const int nbFaceMax = 6;
+        private const int NbFacesMax = 6;
 
-        public int NumeroFace { get => numeroFace;}
+        public int NumeroFace { get => numeroFace; private set => numeroFace = value; }
 
 
+        //constrcuteurs
         public De()
         {
-
             Jeter();
 
         }
 
         public void Jeter()
         {
-            Alea alea = Alea.Instance();
-            numeroFace = alea.Nouveau(1, nbFaceMax);
+            numeroFace = Alea.Instance().Nouveau(1, 6);
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return this.numeroFace.ToString();
+            return base.ToString() + nameof(numeroFace) + "=" + numeroFace + " " + nameof(NbFacesMax) + "=" + NbFacesMax;
         }
 
-        public int CompareTo(De? orther)
+        public int CompareTo(De? other)
         {
-            if (orther == null)
+            if (other == null)
             {
                 return 1;
             }
-            return this.numeroFace.CompareTo(numeroFace); ; 
+            return this.numeroFace.CompareTo(other.numeroFace);
         }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

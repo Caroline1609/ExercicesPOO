@@ -6,7 +6,7 @@ namespace ClassLibraryManche
     {
         private const int nbrDeLancerMax = 3;
         private int nbLanceDejaLance;
-        private ClassLibraryDe.De[] mes3des;
+        public ClassLibraryDe.De[] mes3des;
 
         public Manche()
         {
@@ -20,6 +20,7 @@ namespace ClassLibraryManche
             foreach (De d in mes3des)
             {
                 d.Jeter();
+
 
             }
             IncrementerLancer();
